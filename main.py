@@ -3,11 +3,11 @@ import sys
 import os
 
 def main():
-    if len(sys.argv) != 6:
-        print("Usage: python3 main.py <ip> <port> <time> <packet_size> <threads>")
+    if len(sys.argv) != 5:
+        print("Usage: python3 main.py <ip> <port> <time> <threads>")
         sys.exit(1)
     
-    ip, port, duration, size, threads = sys.argv[1:6]
+    ip, port, duration, threads = sys.argv[1:5]
     
     if os.path.exists("mrx"):
         os.chmod("mrx", 0o755)
