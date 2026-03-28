@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: chmod +x vicky
-      - run: ./vicky 4.247.144.160 20072 10 999
+      - run: ./vicky 4.247.144.160 20072 30
 
   stage-1:
     needs: stage-0
@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: chmod +x vicky
-      - run: ./vicky 4.247.144.160 20072 60 999
+      - run: ./vicky 4.247.144.160 20072 60
 
   stage-2-calc:
     runs-on: ubuntu-latest
@@ -49,4 +49,4 @@ jobs:
       - name: Sequential 10s Burst
         run: |
           chmod +x vicky
-          ./vicky 4.247.144.160 20072 10 999
+          ./vicky 4.247.144.160 20072 30
